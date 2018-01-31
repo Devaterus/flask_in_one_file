@@ -1,0 +1,135 @@
+<html>
+  <head>
+  	<meta charset="UTF-8">
+  	<link rel="stylesheet" href="css.css" type="text/css">
+  	<script src="jquery-3.2.1.min.js"></script>
+  	<script src="jquery.cookie.js"></script>
+    <title>How to troll people</title>
+  </head>
+
+  	<body>
+		<div id="celek">
+			<div id="hlavicka">
+
+			</div>
+			<div id="telo">
+				<div id="menu">
+					<menu>
+						<li><a href="#" class="odkaz" cil="text">About</a></li>
+						<li><a href="#" class="odkaz" cil="informace">Informations</a></li>
+						<li><a href="#" class="odkaz" cil="troll">Photos</a></li>
+						
+					</menu>
+				</div>
+					<div id="obsah">
+					<h2>Trollface</h2>
+A rather deformed face meant to display the expression that trolls have whilst angering people.</p>
+
+It was formed by a man who calls himself "Whynne" on a whim; it was a short comic displaying the fantasy and reality of trolling on the web...</p>
+
+In other words, faggotry is the result of an uneducated opinion being surpressed by people with actual brains, and thus, the idiot decides to troll, rather than the troll making, and I quote: "Intentional logical fallacies."
+					</div>
+				<div id="clear"></div>
+			</div>
+		</div>
+		<div id="spodek">
+			Belongs to property of Miroslav Nakládal
+		</div>
+
+		<div class="hide">
+
+			<div id="informace">
+U can spam trollface in twitch chat by copying this:</p>
+ ░░░░░▄▄▄▄▀▀▀▀▀▀▀▀▄▄▄▄▄▄░░░░░░░ <br>
+░░░░░█░░░░▒▒▒▒▒▒▒▒▒▒▒▒░░▀▀▄░░░░ <br>
+░░░░█░░░▒▒▒▒▒▒░░░░░░░░▒▒▒░░█░░░ <br>
+░░░█░░░░░░▄██▀▄▄░░░░░▄▄▄░░░░█░░ <br>
+░▄▀▒▄▄▄▒░█▀▀▀▀▄▄█░░░██▄▄█░░░░█░ <br>
+█░▒█▒▄░▀▄▄▄▀░░░░░░░░█░░░▒▒▒▒▒░█ <br>
+█░▒█░█▀▄▄░░░░░█▀░░░░▀▄░░▄▀▀▀▄▒█ <br>
+░█░▀▄░█▄░█▀▄▄░▀░▀▀░▄▄▀░░░░█░░█░ <br>
+░░█░░░▀▄▀█▄▄░█▀▀▀▄▄▄▄▀▀█▀██░█░░ <br>
+░░░█░░░░██░░▀█▄▄▄█▄▄█▄████░█░░░ <br>
+░░░░█░░░░▀▀▄░█░░░█░█▀██████░█░░ <br>
+░░░░░▀▄░░░░░▀▀▄▄▄█▄█▄█▄█▄▀░░█░░ <br>
+░░░░░░░▀▄▄░▒▒▒▒░░░░░░░░░░▒░░░█░ <br>
+░░░░░░░░░░▀▀▄▄░▒▒▒▒▒▒▒▒▒▒░░░░█░ <br>
+░░░░░░░░░░░░░░▀▄▄▄▄▄░░░░░░░░█░░<br>
+			</div>
+			<div id="troll">
+<img src="https://images-na.ssl-images-amazon.com/images/I/61SkfoM9kZL._SL1257_.jpg" width="500" height="300" title="troll face 1">
+<img src="https://i.ytimg.com/vi/kcMt_Rc6ZLs/maxresdefault.jpg" width="500" height="300" title="troll face 2">
+<img src="https://vignette.wikia.nocookie.net/youtubepoop/images/9/90/Happy_omega_troll_face_l_1_by_cherryawesome-d7b989i.png/revision/latest?cb=20140914035220" width="500" height="300" title="troll face 3">
+<img src="http://i0.kym-cdn.com/photos/images/newsfeed/000/108/697/UMAD.gif" width="500" height="300" title="troll face 4">
+
+			</div>
+			<div id="text">
+					<h2>Trollface</h2>
+A rather deformed face meant to display the expression that trolls have whilst angering people.</p>
+
+It was formed by a man who calls himself "Whynne" on a whim; it was a short comic displaying the fantasy and reality of trolling on the web...</p>
+
+In other words, faggotry is the result of an uneducated opinion being surpressed by people with actual brains, and thus, the idiot decides to troll, rather than the troll making, and I quote: "Intentional logical fallacies."
+			</div>
+			<div id="logout">
+Wellcome.
+you are logged in
+			</div>
+			<div id="loginpage">
+				<p id="error" class="hide">Wrong name or password!!!</p>
+				<form id="login">
+					<table>
+						Login a Password: admin
+						<tr><td>Login: </td><td><input type="text" id="name"></td></tr> 
+						<tr><td>Password: </td><td><input type="password" id="password"></td></tr> 
+						<tr><td></td><td><input type="submit" value="Přihlásit se"></td></tr>
+					</table>
+				</form>
+			</div>
+		</div>
+
+		<script type="text/javascript">
+			function logged(){
+				return $.cookie("login") == "yes";
+			}
+
+			function redraw(){
+				$("#login").submit(function(e){
+					var name = $("#name").val();
+					var pass = $("#password").val();
+					if(name == "admin" && pass == "admin"){
+						$.cookie("login", "yes", { expires: 7 });
+						location.reload();
+					}else{
+						$("#error").removeClass("hide");
+					}
+					e.preventDefault();
+				});
+			}
+
+			$(function(){
+				var $obsah = $("#obsah");
+				if(logged()){
+					$("menu").append("<li><a href='#'' id='loginOdkaz'>LOG OUT</a></li>");
+					$("#loginOdkaz").click(function(e){
+						$.removeCookie("login");
+						location.reload();
+						e.preventDefault();
+					});
+					$obsah.html($("#logout").html());
+				}else{
+					$("menu").append("<li><a href='#' class='odkaz' cil='loginpage' id=loginOdkaz'>LOG IN</a></li>");
+				}
+				$(".odkaz").click(function(){
+					var name = $(this).attr("cil");
+					$obsah = $("#obsah");
+					$obsah.html($("#"+name).html());
+					$obsah.hide();
+					$obsah.fadeIn(500);
+					redraw();
+				});
+
+			});
+		</script>
+	</body>
+</html>
